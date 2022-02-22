@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 声明 Map
+            let m = new Map();
+
+            // 添加元素
+            m.set('name', 'gogle');
+            m.set('change', () => {
+                console.log('改变');
+            });
+
+            let key = {
+                school: 'baidu',
+            };
+
+            m.set(key, ['baidu', '123', 'uio']);
+
+            // size
+            console.log(m.size);
+
+            // 删除
+            m.delete('name');
+
+            // 遍历
+            // m.clear();
+
+            for (const v of m) {
+                console.log(v);
+            }
+
+            // 获取
+            console.log(m.get(key));
+            console.log(m);
+        </script>
+    </body>
+</html>
