@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 1. Object.is 判断两个值是否完全相等
+            console.log(Object.is(120, 120));
+            console.log(Object.is(NaN, NaN));
+            console.log(Object.is(NaN === NaN));
+
+            // Object.assign 对象的合并 浅拷贝
+            const config1 = {
+                host: 'localhost',
+                port: 3306,
+                name: 'root',
+            };
+            const config2 = {
+                host: 'google.com',
+                port: 33062,
+                name: 'root.com',
+            };
+            console.log(Object.assign(config1, config2));
+
+            // Object.setPrototypeOf 设置原型对象 Object.getPrototypeOf
+            const school = {
+                name: 'shang',
+            };
+            const cities = {
+                xiaoqu: ['baidu', 'shanghai', 'beijing'],
+            };
+
+            Object.setPrototypeOf(school, cities);
+            console.log(Object.getPrototypeOf(cities));
+            console.log(school);
+        </script>
+    </body>
+</html>

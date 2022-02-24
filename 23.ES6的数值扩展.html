@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Number.EPSILON 是js 表示的最小精度
+            // EPSTLON 属性的值接近于 2.220446....
+            function equal(a, b) {
+                if (Math.abs(a - b) < Number.EPSILON) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            console.log(0.1 + 0.2);
+            console.log(equal(0.1 + 0.2, 0.3));
+
+            // 2. 二进制和八进制
+            let b = 0b1010;
+            let o = 0o777; // 八进制
+            let x = 0xff; // 16进制
+            console.log(x);
+            console.log(o);
+
+            // 3. 检测一个数是否为有限数
+            // console.log('-----');
+            // console.log(Number.isFinite(100));
+            // console.log(Number.isFinite(100 / 0));
+            // console.log(Number.isFinite(Infinity));
+
+            // 4. isNaN 检测一个数值是否为NaN
+            console.log(Number.isNaN(123));
+
+            // 5. Number.parseInt Number.parseFloat字符串转整数
+            console.log(Number.parseInt('1231732819sjkldaj'));
+            console.log(Number.parseFloat('123.1732819sjkldaj'));
+
+            // 6. isInteger 判断一个数是否为整数
+            console.log(Number.isInteger(5.5));
+
+            // 7. 将数字的小数部分抹掉
+            console.log(Math.trunc(3.56));
+
+            // 判断一个数到底为整数 复数 还是零
+            console.log(Math.sign(-100));
+        </script>
+    </body>
+</html>

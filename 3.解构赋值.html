@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 数组 解构
+            const hu = ['google', 'baidu', 'hui'];
+            let [yu, yi, hui] = hu;
+            console.log(yu);
+            console.log(yi);
+            console.log(hui);
+
+            // 对象的解构
+            const zhao = {
+                name: 'zhaoyi',
+                age: 18,
+                xiaopin: () => {
+                    console.log('111');
+                },
+            };
+
+            let { name, age, xiaopin } = zhao;
+            console.log(name);
+            console.log(age);
+            console.log(xiaopin);
+        </script>
+    </body>
+</html>

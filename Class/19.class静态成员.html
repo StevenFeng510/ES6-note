@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 手机
+            /*     // 静态成员只能通过构造函数访问
+            function Phone() {}
+
+            Phone.phoneName = '手机';
+            Phone.change = function () {
+                console.log('gaibian');
+            };
+
+            Phone.prototype.size = `5.5inch`;
+
+            let nokia = new Phone();
+
+            console.log(nokia.phoneName); // undefined
+            console.log(nokia.size); */
+
+            // 静态属性属于类, 不属于实例化对象;
+            class Phone {
+                //静态属性
+                static phoneName = '手机';
+                static change() {
+                    console.log('改变');
+                }
+            }
+            let nokia = new Phone();
+            console.log(nokia);
+        </script>
+    </body>
+</html>
