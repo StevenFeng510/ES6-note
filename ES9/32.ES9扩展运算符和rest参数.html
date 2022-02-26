@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // rest 参数
+            function connect({ host, port, ...user }) {
+                console.log(host);
+                console.log(port);
+                console.log(user);
+            }
+
+            connect({
+                host: 'localhost',
+                port: 3306,
+                username: 'root',
+                password: 'root',
+            });
+
+            // 对象的扩展运算符
+            const ski = {
+                a: 'baidu',
+            };
+            const ski1 = {
+                b: 'google',
+            };
+            const ski2 = {
+                v: '890',
+            };
+            const ski3 = {
+                z: 'hui',
+            };
+
+            const comp = {
+                ...ski,
+                ...ski1,
+                ...ski2,
+                ...ski3,
+            };
+            console.log(comp);
+        </script>
+    </body>
+</html>

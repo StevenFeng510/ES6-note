@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 二维数组 fromEntries 将数组 转化为 键值对
+            const res = Object.fromEntries([
+                ['name', 'baidu'],
+                ['xueke', 'google'],
+            ]);
+
+            // Map 方法
+            const m = new Map();
+            m.set('name', 'gai');
+
+            // Object.entries() ES8
+            const arr = Object.entries({
+                name: 'baidu.com',
+            });
+
+            console.log(arr);
+        </script>
+    </body>
+</html>

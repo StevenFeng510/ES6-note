@@ -11,7 +11,16 @@
             // async 函数
             async function fn() {
                 //    返回一个字符串
-                return 'baidu';
+                // return 'baidu';
+                // return;
+
+                // 抛出错误  返回的是一个失败的Promise
+                // throw new Error('chucuo');
+
+                //  返回的结果是一个Promise对象  这种情况居多(返回值不是promise则成功,返回值是promise【promise的值的返回值是成功的】fn返回的结果也是成功的promise对象)
+                return new Promise((resolve, reject) => {
+                    resolve('成功的数据');
+                });
             }
 
             const res = fn();

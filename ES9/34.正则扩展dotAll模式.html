@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // . 元字符 除了换行符以外的任意单个字符
+            let str = `
+            <ul>
+                <li>
+                    <a>xiao</a>
+                    <p>date:111</p>
+                </li>
+                <li>
+                    <a>xiao1</a>
+                    <p>date:222</p>
+                </li>
+            </ul>
+            `;
+
+            // dotAll 模式 s 下 . 可以匹配任意字符
+            const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs;
+
+            console.log(reg.exec(str));
+        </script>
+    </body>
+</html>

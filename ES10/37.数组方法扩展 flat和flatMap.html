@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // flat 平
+            // 将多维数组转化为低纬数组
+            const arr = [1, 2, 3, 4, [5, 6, [7, 8]]];
+
+            // 参数为深度  是一个数字 表示展开几层
+            // console.log(arr.flat(2));
+
+            //flatMap
+            const arr1 = [1, 2, 3, 4];
+            const res = arr1.flatMap((item) => [item * 10]);
+
+            console.log(res);
+        </script>
+    </body>
+</html>
