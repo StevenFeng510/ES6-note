@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function main(config) {
+                // 普通写法
+                // const dbHost = config && config.db && config.db.host;
+
+                // 可选链操作符 ?. 语法糖形式 判断属性是否存在 再读取后项
+                const dbHost = config?.db?.host;
+                console.log(dbHost);
+            }
+
+            main({
+                db: {
+                    host: 'locallhost',
+                    username: 'root',
+                },
+                caches: {
+                    host: 'locallhost',
+                    username: 'root1',
+                },
+            });
+        </script>
+    </body>
+</html>

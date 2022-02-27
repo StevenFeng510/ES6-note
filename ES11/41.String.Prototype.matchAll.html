@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let str = `
+            <ul>
+                <li>
+                    <a>xiao</a>
+                    <p>date:111</p>
+                </li>
+                <li>
+                    <a>xiao1</a>
+                    <p>date:222</p>
+                </li>
+            </ul>
+            `;
+
+            const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs;
+
+            const res = str.matchAll(reg);
+
+            const arr = [...res];
+
+            /*    for (const v of res) {
+                console.log(v);
+            } */
+            console.log(arr);
+        </script>
+    </body>
+</html>
